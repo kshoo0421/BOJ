@@ -52,6 +52,12 @@
     <Filter Include="소스 파일\브론즈\5. 브론즈1">
       <UniqueIdentifier>{165c1266-0752-46a4-8aed-e0e86b9d51e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\새싹\7. 문자열">
+      <UniqueIdentifier>{2f190267-f73f-4033-8a1b-c01c9129a9bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\새싹\8. 함수">
+      <UniqueIdentifier>{f64ae800-c28e-492c-828d-01467f318aa9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="02557.cpp">
@@ -78,8 +84,98 @@
     <ClCompile Include="01271X.cpp">
       <Filter>소스 파일\브론즈\1. 브론즈5</Filter>
     </ClCompile>
-    <ClCompile Include="01008X.cpp">
-      <Filter>소스 파일\브론즈\1. 브론즈5</Filter>
+    <ClCompile Include="10172.cpp">
+      <Filter>소스 파일\새싹\1. 출력</Filter>
+    </ClCompile>
+    <ClCompile Include="25083.cpp">
+      <Filter>소스 파일\새싹\1. 출력</Filter>
+    </ClCompile>
+    <ClCompile Include="10998.cpp">
+      <Filter>소스 파일\새싹\2. 입력과 계산</Filter>
+    </ClCompile>
+    <ClCompile Include="10869.cpp">
+      <Filter>소스 파일\새싹\2. 입력과 계산</Filter>
+    </ClCompile>
+    <ClCompile Include="01008.cpp">
+      <Filter>소스 파일\새싹\2. 입력과 계산</Filter>
+    </ClCompile>
+    <ClCompile Include="11382.cpp">
+      <Filter>소스 파일\새싹\2. 입력과 계산</Filter>
+    </ClCompile>
+    <ClCompile Include="09498.cpp">
+      <Filter>소스 파일\새싹\3. 조건</Filter>
+    </ClCompile>
+    <ClCompile Include="14681.cpp">
+      <Filter>소스 파일\새싹\3. 조건</Filter>
+    </ClCompile>
+    <ClCompile Include="02753.cpp">
+      <Filter>소스 파일\새싹\3. 조건</Filter>
+    </ClCompile>
+    <ClCompile Include="02420.cpp">
+      <Filter>소스 파일\새싹\3. 조건</Filter>
+    </ClCompile>
+    <ClCompile Include="02741.cpp">
+      <Filter>소스 파일\새싹\4. 반복</Filter>
+    </ClCompile>
+    <ClCompile Include="10872.cpp">
+      <Filter>소스 파일\새싹\4. 반복</Filter>
+    </ClCompile>
+    <ClCompile Include="10950.cpp">
+      <Filter>소스 파일\새싹\4. 반복</Filter>
+    </ClCompile>
+    <ClCompile Include="10952.cpp">
+      <Filter>소스 파일\새싹\4. 반복</Filter>
+    </ClCompile>
+    <ClCompile Include="02739.cpp">
+      <Filter>소스 파일\새싹\4. 반복</Filter>
+    </ClCompile>
+    <ClCompile Include="02438.cpp">
+      <Filter>소스 파일\새싹\4. 반복</Filter>
+    </ClCompile>
+    <ClCompile Include="10951.cpp">
+      <Filter>소스 파일\새싹\4. 반복</Filter>
+    </ClCompile>
+    <ClCompile Include="15552.cpp">
+      <Filter>소스 파일\새싹\5. 빠른 입출력</Filter>
+    </ClCompile>
+    <ClCompile Include="10871.cpp">
+      <Filter>소스 파일\새싹\6. 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="10807.cpp">
+      <Filter>소스 파일\새싹\6. 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="05597.cpp">
+      <Filter>소스 파일\새싹\6. 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="02738.cpp">
+      <Filter>소스 파일\새싹\6. 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="11654.cpp">
+      <Filter>소스 파일\새싹\7. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="2743.cpp">
+      <Filter>소스 파일\새싹\7. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="02744.cpp">
+      <Filter>소스 파일\새싹\7. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="02754.cpp">
+      <Filter>소스 파일\새싹\7. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="10809.cpp">
+      <Filter>소스 파일\새싹\7. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="11718R.cpp">
+      <Filter>소스 파일\새싹\7. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="09086.cpp">
+      <Filter>소스 파일\새싹\7. 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="15964.cpp">
+      <Filter>소스 파일\새싹\8. 함수</Filter>
+    </ClCompile>
+    <ClCompile Include="02475.cpp">
+      <Filter>소스 파일\새싹\8. 함수</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
