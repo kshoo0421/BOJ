@@ -37,26 +37,26 @@
     <Filter Include="소스 파일\새싹\6. 배열">
       <UniqueIdentifier>{da229e5e-13b0-4d0e-9c01-34218ab3e5cc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\브론즈\1. 브론즈5">
-      <UniqueIdentifier>{eb10ab6c-7b71-407d-b723-4031a7b2355b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\브론즈\2. 브론즈4">
-      <UniqueIdentifier>{ef3b355f-b698-4284-9d4e-d2b2a41920f7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\브론즈\3. 브론즈3">
-      <UniqueIdentifier>{cc5dd442-68d7-443d-bb95-aa3c0e0010ae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\브론즈\4. 브론즈2">
-      <UniqueIdentifier>{e3f3678a-0703-4704-99e6-7fd1f0defcf1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\브론즈\5. 브론즈1">
-      <UniqueIdentifier>{165c1266-0752-46a4-8aed-e0e86b9d51e8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\새싹\7. 문자열">
       <UniqueIdentifier>{2f190267-f73f-4033-8a1b-c01c9129a9bc}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\새싹\8. 함수">
       <UniqueIdentifier>{f64ae800-c28e-492c-828d-01467f318aa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\브론즈\브론즈5">
+      <UniqueIdentifier>{eb10ab6c-7b71-407d-b723-4031a7b2355b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\브론즈\브론즈4">
+      <UniqueIdentifier>{ef3b355f-b698-4284-9d4e-d2b2a41920f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\브론즈\브론즈3">
+      <UniqueIdentifier>{cc5dd442-68d7-443d-bb95-aa3c0e0010ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\브론즈\브론즈2">
+      <UniqueIdentifier>{e3f3678a-0703-4704-99e6-7fd1f0defcf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\브론즈\브론즈1">
+      <UniqueIdentifier>{165c1266-0752-46a4-8aed-e0e86b9d51e8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -82,7 +82,7 @@
       <Filter>소스 파일\새싹\3. 조건</Filter>
     </ClCompile>
     <ClCompile Include="01271X.cpp">
-      <Filter>소스 파일\브론즈\1. 브론즈5</Filter>
+      <Filter>소스 파일\브론즈\브론즈5</Filter>
     </ClCompile>
     <ClCompile Include="10172.cpp">
       <Filter>소스 파일\새싹\1. 출력</Filter>
@@ -176,6 +176,33 @@
     </ClCompile>
     <ClCompile Include="02475.cpp">
       <Filter>소스 파일\새싹\8. 함수</Filter>
+    </ClCompile>
+    <ClCompile Include="02562.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="02675.cpp">
+      <Filter>소스 파일\브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="02920.cpp">
+      <Filter>소스 파일\브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="08958.cpp">
+      <Filter>소스 파일\브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="11720.cpp">
+      <Filter>소스 파일\브론즈\브론즈4</Filter>
+    </ClCompile>
+    <ClCompile Include="10818.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="02742.cpp">
+      <Filter>소스 파일\브론즈\브론즈4</Filter>
+    </ClCompile>
+    <ClCompile Include="02439.cpp">
+      <Filter>소스 파일\브론즈\브론즈4</Filter>
+    </ClCompile>
+    <ClCompile Include="02884.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
