@@ -204,20 +204,38 @@
     <ClCompile Include="02884.cpp">
       <Filter>소스 파일\브론즈\브론즈3</Filter>
     </ClCompile>
-    <ClCompile Include="2577.cpp">
+    <ClCompile Include="02577.cpp">
       <Filter>소스 파일\브론즈\브론즈2</Filter>
     </ClCompile>
-    <ClCompile Include="2908.cpp">
+    <ClCompile Include="02908.cpp">
       <Filter>소스 파일\브론즈\브론즈2</Filter>
     </ClCompile>
-    <ClCompile Include="3052.cpp">
+    <ClCompile Include="03052.cpp">
       <Filter>소스 파일\브론즈\브론즈2</Filter>
     </ClCompile>
-    <ClCompile Include="1152.cpp">
+    <ClCompile Include="01152.cpp">
       <Filter>소스 파일\브론즈\브론즈2</Filter>
     </ClCompile>
-    <ClCompile Include="1157.cpp">
+    <ClCompile Include="01157.cpp">
       <Filter>소스 파일\브론즈\브론즈1</Filter>
+    </ClCompile>
+    <ClCompile Include="01546.cpp">
+      <Filter>소스 파일\브론즈\브론즈1</Filter>
+    </ClCompile>
+    <ClCompile Include="01085.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="04153.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="10250.cpp">
+      <Filter>소스 파일\브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="02292.cpp">
+      <Filter>소스 파일\브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="15829.cpp">
+      <Filter>소스 파일\브론즈\브론즈2</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

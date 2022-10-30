@@ -1,12 +1,74 @@
-// C++는 범위가 큰 수를 지원을 안해줘서 추가로 연구를 해야함. 나중에 다시 할 것.
 #include <iostream>
+#include <string>
+using namespace std;
+
+class BigInteger
+{
+private :
+	string value;
+
+	enum compare {
+		BIG, SMALL, EQUAL
+	};
+
+	compare makeCompare(int a, int b)
+	{
+		if (a > b)
+			return BIG;
+		else if (a < b)
+			return SMALL;
+		else return EQUAL;
+	}
+
+public :
+	BigInteger(string str)
+	{
+		value = str;
+	}
+
+	BigInteger operator+(const BigInteger& anotherBigInt)
+	{
+		int l_length = this->value.length();
+		int r_length = anotherBigInt.value.length();
+		char* temp_string;
+		compare comp_result = makeCompare(l_length, r_length);
+		
+		// 동적 할당
+		if (comp_result == BIG)
+			temp_string = new char[l_length];
+		else
+			temp_string = new char[l_length];
+
+
+		string result_string = temp_string;
+
+		// 할당 해제
+		delete temp_string;
+		return result_string;
+	}
+
+	BigInteger operator/(const BigInteger& anotherBigInt)
+	{
+		int l_length = this->value.length();
+		int r_length = anotherBigInt.value.length();
+		
+		
+	}
+
+	BigInteger operator%(const BigInteger& anotherBigInt)
+	{
+
+	}
+
+};
 
 int main()
 {
-	unsigned long long int a, b;
-	std::cin >> a >> b;
-	unsigned long long int c = a / b;
-	std::cout << c << std::endl;
-	std::cout << a - (b * c) << std::endl;
+	string a, b;
+	cin >> a >> b;
+	BigInteger BigA(a), BigB(b);
+
+	// a/b 출력
+	// a%b 출력
 	return 0;
 }
