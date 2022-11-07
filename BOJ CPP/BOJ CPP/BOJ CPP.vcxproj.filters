@@ -327,5 +327,20 @@
     <ClCompile Include="10953.cpp">
       <Filter>소스 파일\브론즈\브론즈3</Filter>
     </ClCompile>
+    <ClCompile Include="02445.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="02443.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="02444.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="02523.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="02490.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
