@@ -7,10 +7,8 @@ int main()
 {
 	int r;
 	cin >> r;
-	float pi = M_PI;
-	float taxi = sqrt(2(r*r)
-	cout << (float)r * (float)r * pi;
-	
-
+	double pi = M_PI;
+	double taxi = 2 * r * r;
+	printf("%.6f\n%.6f", (double)r * (double)r * pi, taxi);
 	return 0;
 }
