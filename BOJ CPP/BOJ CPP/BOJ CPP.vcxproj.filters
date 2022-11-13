@@ -402,5 +402,26 @@
     <ClCompile Include="05063.cpp">
       <Filter>소스 파일\브론즈\브론즈3</Filter>
     </ClCompile>
+    <ClCompile Include="10833.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="02935.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="02476.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="15894.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="09085.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="10995.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="10987.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
