@@ -58,6 +58,12 @@
     <Filter Include="소스 파일\브론즈\브론즈1">
       <UniqueIdentifier>{165c1266-0752-46a4-8aed-e0e86b9d51e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\골드">
+      <UniqueIdentifier>{d51291c5-9400-4b75-91f6-a1f847718473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\골드\골드5">
+      <UniqueIdentifier>{e48ab070-1f6e-47a6-9a0b-46a378fe714e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="02557.cpp">
@@ -421,6 +427,21 @@
       <Filter>소스 파일\브론즈\브론즈3</Filter>
     </ClCompile>
     <ClCompile Include="10987.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="03460.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="01267.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="10990.cpp">
+      <Filter>소스 파일\브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="02447.cpp">
+      <Filter>소스 파일\골드\골드5</Filter>
+    </ClCompile>
+    <ClCompile Include="15953.cpp">
       <Filter>소스 파일\브론즈\브론즈3</Filter>
     </ClCompile>
   </ItemGroup>
