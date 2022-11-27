@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 bool check_blank(const int& n, int curX, int curY)
 {
@@ -9,22 +8,10 @@ bool check_blank(const int& n, int curX, int curY)
 		if (curX / slash3 == 1 && curY / slash3 == 1) return false;
 		else
 		{
-			switch (curX / slash3)
-			{
-			case 2: curX -= slash3;
-			case 1: curX -= slash3;
-			case 0:
-			default: break;
-			}
-			switch (curY / slash3)
-			{
-			case 2: curY -= slash3;
-			case 1: curY -= slash3;
-			case 0:
-			default: break;
-			}
+			curX -= slash3 * (curX / slash3);
+			curY -= slash3 * (curY / slash3);
+			slash3 /= 3;
 		}
-		slash3 /= 3;
 	}
 	return true;
 }
@@ -32,15 +19,15 @@ bool check_blank(const int& n, int curX, int curY)
 int main()
 {
 	int n;
-	cin >> n;
+	scanf("%d", &n);
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
 		{
-			if (check_blank(n, i, j)) cout << "*";
-			else cout << " ";
+			if (check_blank(n, i, j)) printf("*");
+			else printf(" ");
 		}
-		cout << endl;
+		printf("\n");
 	}
 	return 0;
 }
