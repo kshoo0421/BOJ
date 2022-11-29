@@ -76,6 +76,9 @@
     <Filter Include="소스 파일\2. 실버\실버1">
       <UniqueIdentifier>{a239e5f5-a6fa-4d47-b2f4-36a55a5d9bcb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\2. 실버\실버2">
+      <UniqueIdentifier>{7904ffbf-b913-4ffb-b890-8333369cb13b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="02557.cpp">
@@ -656,6 +659,36 @@
     </ClCompile>
     <ClCompile Include="15733.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈5</Filter>
+    </ClCompile>
+    <ClCompile Include="01018.cpp">
+      <Filter>소스 파일\2. 실버\실버4</Filter>
+    </ClCompile>
+    <ClCompile Include="11866.cpp">
+      <Filter>소스 파일\2. 실버\실버4</Filter>
+    </ClCompile>
+    <ClCompile Include="10997.cpp">
+      <Filter>소스 파일\2. 실버\실버2</Filter>
+    </ClCompile>
+    <ClCompile Include="05338.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈5</Filter>
+    </ClCompile>
+    <ClCompile Include="10994.cpp">
+      <Filter>소스 파일\2. 실버\실버4</Filter>
+    </ClCompile>
+    <ClCompile Include="10996.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="13015.cpp">
+      <Filter>소스 파일\2. 실버\실버4</Filter>
+    </ClCompile>
+    <ClCompile Include="02164.cpp">
+      <Filter>소스 파일\2. 실버\실버4</Filter>
+    </ClCompile>
+    <ClCompile Include="10816.cpp">
+      <Filter>소스 파일\2. 실버\실버4</Filter>
+    </ClCompile>
+    <ClCompile Include="09012.cpp">
+      <Filter>소스 파일\2. 실버\실버4</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
