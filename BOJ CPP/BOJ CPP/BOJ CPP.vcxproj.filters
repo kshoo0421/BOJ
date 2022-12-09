@@ -810,5 +810,20 @@
     <ClCompile Include="24900.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈5</Filter>
     </ClCompile>
+    <ClCompile Include="17496.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="13752.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="01284.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="02959.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="10179.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
