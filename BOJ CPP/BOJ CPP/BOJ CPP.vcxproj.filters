@@ -888,5 +888,20 @@
     <ClCompile Include="05523.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
     </ClCompile>
+    <ClCompile Include="16673.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="03059.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="10409.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="17614.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
+    </ClCompile>
+    <ClCompile Include="11586.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
