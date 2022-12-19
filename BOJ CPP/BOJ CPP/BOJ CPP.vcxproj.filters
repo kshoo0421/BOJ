@@ -951,5 +951,20 @@
     <ClCompile Include="25305.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
     </ClCompile>
+    <ClCompile Include="04949.cpp">
+      <Filter>소스 파일\2. 실버\실버4</Filter>
+    </ClCompile>
+    <ClCompile Include="07568.cpp">
+      <Filter>소스 파일\2. 실버\실버5</Filter>
+    </ClCompile>
+    <ClCompile Include="01874.cpp">
+      <Filter>소스 파일\2. 실버\실버3</Filter>
+    </ClCompile>
+    <ClCompile Include="02864.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="02810.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
