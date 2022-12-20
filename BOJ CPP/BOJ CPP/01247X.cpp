@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
@@ -7,23 +8,21 @@ int main()
 	for (int i = 0; i < 3; i++)
 	{
 		sum = 0;
-		over = 0;
-		std::cin >> n;
+		cin >> n;
 		while (n-- != 0)
 		{
-			std::cin >> input;
-			if ((sum > 0 && input > 0) && (long long)(sum + input) < 0) over++;
-			else if ((sum < 0 && input < 0) && (long long)(sum + input) > 0) over--;
+			cin >> input;
+			if (input > 0 && sum + input < sum) over++;
+			else if (input < 0 && sum + input > sum) over--;
 			sum += input;
 		}
-
-		if (over > 0) std::cout << "+" << std::endl;
-		else if (over < 0) std::cout << "-" << std::endl;
+		if (over > 0) cout << "+" << endl;
+		else if (over < 0) cout << "-" << endl;
 		else
 		{
-			if (sum == 0) std::cout << "0" << std::endl;
-			else if (sum < 0) std::cout << "-" << std::endl;
-			else std::cout << "+" << std::endl;
+			if (sum == 0) cout << "0" << endl;
+			else if (sum > 0) cout << "+" << endl;
+			else cout << "-" << endl;
 		}
 	}
 	return 0;
