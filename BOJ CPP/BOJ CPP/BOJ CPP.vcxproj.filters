@@ -108,7 +108,7 @@
     <ClCompile Include="01330.cpp">
       <Filter>소스 파일\0. 새싹\3. 조건</Filter>
     </ClCompile>
-    <ClCompile Include="01271X.cpp">
+    <ClCompile Include="01271.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈5</Filter>
     </ClCompile>
     <ClCompile Include="10172.cpp">
@@ -840,7 +840,7 @@
     <ClCompile Include="11023.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
     </ClCompile>
-    <ClCompile Include="01247X.cpp">
+    <ClCompile Include="01247.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
     </ClCompile>
     <ClCompile Include="11006.cpp">
@@ -987,7 +987,7 @@
     <ClCompile Include="01302.cpp">
       <Filter>소스 파일\2. 실버\실버4</Filter>
     </ClCompile>
-    <ClCompile Include="10825X.cpp">
+    <ClCompile Include="10825.cpp">
       <Filter>소스 파일\2. 실버\실버4</Filter>
     </ClCompile>
     <ClCompile Include="02902.cpp">
@@ -1095,7 +1095,7 @@
     <ClCompile Include="01620.cpp">
       <Filter>소스 파일\2. 실버\실버4</Filter>
     </ClCompile>
-    <ClCompile Include="09095X.cpp">
+    <ClCompile Include="09095.cpp">
       <Filter>소스 파일\2. 실버\실버3</Filter>
     </ClCompile>
     <ClCompile Include="02941.cpp">
@@ -1110,7 +1110,7 @@
     <ClCompile Include="01212.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
     </ClCompile>
-    <ClCompile Include="01002X.cpp">
+    <ClCompile Include="01002.cpp">
       <Filter>소스 파일\2. 실버\실버3</Filter>
     </ClCompile>
     <ClCompile Include="01037.cpp">
@@ -1208,6 +1208,21 @@
     </ClCompile>
     <ClCompile Include="11944.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="10821.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="05218.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="11170.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈1</Filter>
+    </ClCompile>
+    <ClCompile Include="11655.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈1</Filter>
+    </ClCompile>
+    <ClCompile Include="01463.cpp">
+      <Filter>소스 파일\2. 실버\실버3</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

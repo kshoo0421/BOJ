@@ -43,6 +43,7 @@ int main()
 	cin.tie(0);	// 입력 속도 줄이기
 	cout << "cout << " << endl;	// endl은 출력 버퍼 비우는 역할까지 함. 속도를 위해서는 \n 사용
 	cin >> i_1;
+	cin.ignore(); // 버퍼 비우기
 
 	cout << showbase;	// 출력에 진법 표시 0, 0x 등
 	cout << dec << "10진수(dec) : " << i_1 << endl;	// dec는 10진수, 기본값은 dec
