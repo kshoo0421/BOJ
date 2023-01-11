@@ -56,6 +56,12 @@ int main()
 	cout << fixed;	// 소수부 부분만 따로 지정하겠다는 의미
 	cout << "소수부만 따로 지정 : " << d_1 << endl;
 
+	// string
+	string str = "hello world, c++";
+	string newstr1 = str.substr(0, 5);
+	string newstr2 = str.substr(6, 5);
+	string newstr3 = str.substr(13, 3);
+	
 	// <iomanip>
 	cout << setw(5) << i_1 << endl;	// setw(n) 일회성, n만큼 최소한의 자리 확보
 	cout << setw(3) << 10 << ",";
