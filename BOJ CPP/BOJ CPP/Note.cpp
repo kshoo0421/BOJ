@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>	// 함수형식 조정자 헤더 파일
 #include <algorithm>
-//#include <string>
+#include <string>
 //#include <cmath>
 //#include <vector>
 //#include <stack>
@@ -62,6 +62,18 @@ int main()
 	string newstr2 = str.substr(6, 5);
 	string newstr3 = str.substr(13, 3);
 	
+	// <string>
+	int n;
+	getline(cin, str);
+	do {
+		cin >> str;
+	} while (getc(stdin) == ' ');	// 엔터를 사용하여 반복문 탈출
+	while (cin >> str) {	// EOF(End Of File)이 등장하면 탈출
+		cout << str << endl;
+	}
+	while (scanf("%d", &n) != EOF) { // EOF(End Of File)이 등장하면 탈출
+		printf("%d \n", n);
+	}
 	// <iomanip>
 	cout << setw(5) << i_1 << endl;	// setw(n) 일회성, n만큼 최소한의 자리 확보
 	cout << setw(3) << 10 << ",";
