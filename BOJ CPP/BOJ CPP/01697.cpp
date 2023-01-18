@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int vis[100001];
+int cost[100001];
 
 int main()
 {
@@ -9,8 +9,8 @@ int main()
 	int n, k, tmp_i; cin >> n >> k;
 	queue<int> q;
 	vector<int> tmp_q;
-	fill(vis, vis + 100001, -1);
-	vis[n] = 0;
+	fill(cost, cost + 100001, -1);
+	cost[n] = 0;
 	q.push(n);
 	while (!q.empty())
 	{
@@ -18,30 +18,30 @@ int main()
 		q.pop();
 		if (tmp_i > 0)
 		{
-			if (vis[tmp_i - 1] == -1)
+			if (cost[tmp_i - 1] == -1)
 			{
 				q.push(tmp_i - 1);
-				vis[tmp_i - 1] = vis[tmp_i] + 1;
+				cost[tmp_i - 1] = cost[tmp_i] + 1;
 			}
 		}
 		if (tmp_i < 100000)
 		{
-			if (vis[tmp_i + 1] == -1)
+			if (cost[tmp_i + 1] == -1)
 			{
 				q.push(tmp_i + 1);
-				vis[tmp_i + 1] = vis[tmp_i] + 1;
+				cost[tmp_i + 1] = cost[tmp_i] + 1;
 			}
 		}
 		if (tmp_i < 50001)
 		{
-			if (vis[tmp_i * 2] == -1)
+			if (cost[tmp_i * 2] == -1)
 			{
 				q.push(tmp_i * 2);
-				vis[tmp_i * 2] = vis[tmp_i] + 1;
+				cost[tmp_i * 2] = cost[tmp_i] + 1;
 			}
 		}
-		if (vis[k] != -1) break;
+		if (cost[k] != -1) break;
 	}
-	cout << vis[k];
+	cout << cost[k];
 	return 0;
 }

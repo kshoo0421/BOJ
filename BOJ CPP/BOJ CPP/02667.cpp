@@ -2,7 +2,7 @@
 using namespace std;
 int n, cnt = 1, t1, t2, nx, ny;
 int dx[4] = { 1, 0, -1, 0 }, dy[4] = { 0, 1, 0, -1 };
-int dots[26][26], vis[26][26];
+int dots[26][26], cost[26][26];
 string input;
 queue<pair<int, int>> q;
 vector<int> ans;
@@ -20,7 +20,7 @@ int main()
 	{
 		for (int j = 0; j < n; j++)
 		{
-			if (vis[i][j] || !dots[i][j]) continue;
+			if (cost[i][j] || !dots[i][j]) continue;
 			cnt = 0;
 			q.push({ i, j });
 			while (!q.empty())
@@ -28,15 +28,15 @@ int main()
 				t1 = q.front().first;
 				t2 = q.front().second;
 				q.pop();
-				if (vis[t1][t2] || !dots[t1][t2]) continue;
-				vis[t1][t2] = 1;
+				if (cost[t1][t2] || !dots[t1][t2]) continue;
+				cost[t1][t2] = 1;
 				cnt++;
 				for (int k = 0; k < 4; k++)
 				{
 					ny = t1 + dy[k];
 					nx = t2 + dx[k];
 					if (nx < 0 || nx >= n || ny < 0 || ny >= n) continue;
-					if (vis[ny][nx] || !dots[ny][nx]) continue;
+					if (cost[ny][nx] || !dots[ny][nx]) continue;
 					q.push({ ny, nx });
 				}
 			}
