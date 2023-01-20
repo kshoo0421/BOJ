@@ -1485,5 +1485,20 @@
     <ClCompile Include="01453.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
     </ClCompile>
+    <ClCompile Include="15649r.cpp">
+      <Filter>소스 파일\2. 실버\실버3</Filter>
+    </ClCompile>
+    <ClCompile Include="09663.cpp">
+      <Filter>소스 파일\3. 골드\골드4</Filter>
+    </ClCompile>
+    <ClCompile Include="01182r.cpp">
+      <Filter>소스 파일\2. 실버\실버2</Filter>
+    </ClCompile>
+    <ClCompile Include="11048.cpp">
+      <Filter>소스 파일\2. 실버\실버2</Filter>
+    </ClCompile>
+    <ClCompile Include="09184.cpp">
+      <Filter>소스 파일\2. 실버\실버2</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
