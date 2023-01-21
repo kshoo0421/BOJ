@@ -1,12 +1,4 @@
-#include <iostream>
-#include <iomanip>	// 함수형식 조정자 헤더 파일
-#include <algorithm>
-#include <string>
-//#include <cmath>
-//#include <vector>
-//#include <stack>
-//#include <queue>
-//#include <map>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -85,6 +77,9 @@ int main()
 	cout << setfill(' ');	// 초기 설정은 공백
 	cout << left << setw(5) << 100 << endl;	// 자리 확보 시 왼쪽 정렬
 	cout << right << setw(5) << 100 << endl;	// 자리 확보 시 오른쪽 정렬(기본값)
+
+	std::vector<int> v{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	std::fill(v.begin(), v.end(), -1);
 
 	return 0;
 }

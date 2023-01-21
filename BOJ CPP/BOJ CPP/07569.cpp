@@ -16,7 +16,7 @@ struct i3
 };
 
 i3 tmp_arr;
-queue<i3> q;
+queue<i3> stk;
 
 int main()
 {
@@ -44,14 +44,14 @@ int main()
 					tmp_arr.n[0] = i;
 					tmp_arr.n[1] = j;
 					tmp_arr.n[2] = k;
-					q.push(tmp_arr);
+					stk.push(tmp_arr);
 
-					while (!q.empty())
+					while (!stk.empty())
 					{
-						cx = q.front().n[2];
-						cy = q.front().n[1];
-						cz = q.front().n[0];
-						q.pop();
+						cx = stk.front().n[2];
+						cy = stk.front().n[1];
+						cz = stk.front().n[0];
+						stk.pop();
 
 						for (int l = 0; l < 6; l++)
 						{
@@ -69,7 +69,7 @@ int main()
 								tmp_arr.n[0] = nz;
 								tmp_arr.n[1] = ny;
 								tmp_arr.n[2] = nx;
-								q.push(tmp_arr);
+								stk.push(tmp_arr);
 							}
 						}
 					}

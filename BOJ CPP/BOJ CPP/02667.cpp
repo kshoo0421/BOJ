@@ -4,7 +4,7 @@ int n, cnt = 1, t1, t2, nx, ny;
 int dx[4] = { 1, 0, -1, 0 }, dy[4] = { 0, 1, 0, -1 };
 int dots[26][26], cost[26][26];
 string input;
-queue<pair<int, int>> q;
+queue<pair<int, int>> stk;
 vector<int> ans;
 
 int main()
@@ -22,12 +22,12 @@ int main()
 		{
 			if (cost[i][j] || !dots[i][j]) continue;
 			cnt = 0;
-			q.push({ i, j });
-			while (!q.empty())
+			stk.push({ i, j });
+			while (!stk.empty())
 			{
-				t1 = q.front().first;
-				t2 = q.front().second;
-				q.pop();
+				t1 = stk.front().first;
+				t2 = stk.front().second;
+				stk.pop();
 				if (cost[t1][t2] || !dots[t1][t2]) continue;
 				cost[t1][t2] = 1;
 				cnt++;
@@ -37,7 +37,7 @@ int main()
 					nx = t2 + dx[k];
 					if (nx < 0 || nx >= n || ny < 0 || ny >= n) continue;
 					if (cost[ny][nx] || !dots[ny][nx]) continue;
-					q.push({ ny, nx });
+					stk.push({ ny, nx });
 				}
 			}
 			ans.emplace_back(cnt);

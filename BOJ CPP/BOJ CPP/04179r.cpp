@@ -10,7 +10,7 @@ int chk[1002][1002];
 int fire_chk[1002][1002];
 
 queue<pair<int, int>> fire;
-queue<pair<int, int>> q;
+queue<pair<int, int>> stk;
 
 void Fire_move() {
 	while (!fire.empty()) {
@@ -39,12 +39,12 @@ void Fire_move() {
 
 int Jihoon_move() {
 
-	chk[q.front().first][q.front().second] = true;
+	chk[stk.front().first][stk.front().second] = true;
 
-	while (!q.empty()) {
-		int y = q.front().first;
-		int x = q.front().second;
-		q.pop();
+	while (!stk.empty()) {
+		int y = stk.front().first;
+		int x = stk.front().second;
+		stk.pop();
 
 		if (y == 0 || x == 0 || y == R - 1 || x == C - 1) {
 			return chk[y][x];
@@ -60,7 +60,7 @@ int Jihoon_move() {
 			if (maze[ny][nx] == '.' && !chk[ny][nx]) {
 				if (fire_chk[ny][nx] > chk[y][x] + 1 || fire_chk[ny][nx] == 0) {
 					chk[ny][nx] = chk[y][x] + 1;
-					q.push(make_pair(ny, nx));
+					stk.push(make_pair(ny, nx));
 				}
 			}
 		}
@@ -74,7 +74,7 @@ void input() {
 		for (int j = 0; j < C; j++) {
 			cin >> maze[i][j];
 			if (maze[i][j] == 'J') {
-				q.push(make_pair(i, j));
+				stk.push(make_pair(i, j));
 			}
 			else if (maze[i][j] == 'F') {
 				fire.push(make_pair(i, j));
