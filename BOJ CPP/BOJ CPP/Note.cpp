@@ -23,6 +23,12 @@ int main()
 		printf("i : %d, int i : num_array\n");
 	}
 
+	int n;
+
+	while (cin >> n) {
+		cout << n << endl;
+	}	// eof 반환시 종료
+
 	// stdio.h
 	printf("int : %d\nlong long : %lld\nfloat : %f\n, double : %f\n", i_1, lli_1, f_1, f_1, d_1);
 	printf("%10d\n", i_1);	// 정수부분 10자리
