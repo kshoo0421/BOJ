@@ -1581,5 +1581,14 @@
     <ClCompile Include="05704.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
     </ClCompile>
+    <ClCompile Include="11091.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="02954.cpp">
+      <Filter>소스 파일\1. 브론즈\브론즈2</Filter>
+    </ClCompile>
+    <ClCompile Include="01520.cpp">
+      <Filter>소스 파일\3. 골드\골드3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

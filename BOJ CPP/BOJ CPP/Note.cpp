@@ -87,5 +87,15 @@ int main()
 	std::vector<int> v{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 	std::fill(v.begin(), v.end(), -1);
 
+
+	/*struct cmp {
+		bool operator()(pair<int, int> i, pair<int, int> j)
+		{
+			return input[i.first][i.second] > input[j.first][j.second];
+		}
+	};
+	priority_queue<pair<int, int>, vector<pair<int, int>>, cmp> q;*/
+
+
 	return 0;
 }
