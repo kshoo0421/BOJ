@@ -96,6 +96,13 @@ int main()
 	};
 	priority_queue<pair<int, int>, vector<pair<int, int>>, cmp> q;*/
 
+	// 백트래킹에서 사용(n과 m 시리즈)
+	//string s = "aba";	
+	//sort(s.begin(), s.end());
+	//do {
+	//	cout << s << '\n';
+	//} while (next_permutation(s.begin(), s.end()));
+
 
 	return 0;
 }
