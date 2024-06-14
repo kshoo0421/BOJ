@@ -61,33 +61,6 @@
     <Filter Include="소스 파일\3. 골드\골드3">
       <UniqueIdentifier>{32be010e-ef0c-4c93-bf99-eab4debc0be8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\3. 골드\골드4\0. 새싹">
-      <UniqueIdentifier>{51809959-f78a-45a8-a094-7fa012cae035}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\3. 골드\골드4\0. 새싹\1. 출력">
-      <UniqueIdentifier>{9093d18e-c38e-47cd-b7b0-660851cb61e7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\3. 골드\골드4\0. 새싹\2. 입력과 계산">
-      <UniqueIdentifier>{60dbdbaa-cfad-4506-b8bc-47cca8311ae1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\3. 골드\골드4\0. 새싹\3. 조건">
-      <UniqueIdentifier>{92d4ca77-54eb-4ad7-9217-f50ae5bd9787}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\3. 골드\골드4\0. 새싹\4. 반복">
-      <UniqueIdentifier>{30228a89-7de5-4d3c-a4e3-230516c66bf9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\3. 골드\골드4\0. 새싹\5. 빠른 입출력">
-      <UniqueIdentifier>{fd065bf9-2609-4d5b-a729-53458654d916}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\3. 골드\골드4\0. 새싹\6. 배열">
-      <UniqueIdentifier>{da229e5e-13b0-4d0e-9c01-34218ab3e5cc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\3. 골드\골드4\0. 새싹\7. 문자열">
-      <UniqueIdentifier>{2f190267-f73f-4033-8a1b-c01c9129a9bc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\3. 골드\골드4\0. 새싹\8. 함수">
-      <UniqueIdentifier>{f64ae800-c28e-492c-828d-01467f318aa9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\코딩테스트용">
       <UniqueIdentifier>{017a3af8-a254-432e-9770-e35a7169fc63}</UniqueIdentifier>
     </Filter>
@@ -115,124 +88,178 @@
     <Filter Include="소스 파일\코딩테스트용\8. 백트래킹">
       <UniqueIdentifier>{70ffc6f8-3c94-48d3-abef-049ee0a3f442}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\코딩테스트용\9. 비트마스킹">
+      <UniqueIdentifier>{a15a9cf5-cc2a-4bff-afab-a0dfd9cb16eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\코딩테스트용\10. 그리디">
+      <UniqueIdentifier>{6078576a-9636-40a9-94b9-72762db9a10a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\코딩테스트용\11. 라인스위핑">
+      <UniqueIdentifier>{c6efcacf-e862-4322-b1c5-649b47bc57fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\코딩테스트용\12. 투 포인터">
+      <UniqueIdentifier>{2d0b2774-9d85-4c54-8d37-86bb4ededb86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\코딩테스트용\13. LIS">
+      <UniqueIdentifier>{c21cdd05-8eeb-48fa-a5ca-e1055aa5a380}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\코딩테스트용\14. 이분탐색">
+      <UniqueIdentifier>{f2df0d6b-42ab-47a4-9e63-8a29fe1d27f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\코딩테스트용\15. DP">
+      <UniqueIdentifier>{a7f94b15-a33a-45bd-9b3a-396f385d2d2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\코딩테스트용\16. 최단거리">
+      <UniqueIdentifier>{518aaa4f-1c3f-4bf9-94cb-e87fc5a5b15a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\코딩테스트용\17. 펜윅트리">
+      <UniqueIdentifier>{1e5c60e5-de68-471c-b94f-306431c97897}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0. 새싹">
+      <UniqueIdentifier>{51809959-f78a-45a8-a094-7fa012cae035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0. 새싹\1. 출력">
+      <UniqueIdentifier>{9093d18e-c38e-47cd-b7b0-660851cb61e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0. 새싹\2. 입력과 계산">
+      <UniqueIdentifier>{60dbdbaa-cfad-4506-b8bc-47cca8311ae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0. 새싹\3. 조건">
+      <UniqueIdentifier>{92d4ca77-54eb-4ad7-9217-f50ae5bd9787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0. 새싹\4. 반복">
+      <UniqueIdentifier>{30228a89-7de5-4d3c-a4e3-230516c66bf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0. 새싹\5. 빠른 입출력">
+      <UniqueIdentifier>{fd065bf9-2609-4d5b-a729-53458654d916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0. 새싹\6. 배열">
+      <UniqueIdentifier>{da229e5e-13b0-4d0e-9c01-34218ab3e5cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0. 새싹\7. 문자열">
+      <UniqueIdentifier>{2f190267-f73f-4033-8a1b-c01c9129a9bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0. 새싹\8. 함수">
+      <UniqueIdentifier>{f64ae800-c28e-492c-828d-01467f318aa9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="02557.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\1. 출력</Filter>
+      <Filter>소스 파일\0. 새싹\1. 출력</Filter>
     </ClCompile>
     <ClCompile Include="10699.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\1. 출력</Filter>
+      <Filter>소스 파일\0. 새싹\1. 출력</Filter>
     </ClCompile>
     <ClCompile Include="07287.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\1. 출력</Filter>
+      <Filter>소스 파일\0. 새싹\1. 출력</Filter>
     </ClCompile>
     <ClCompile Include="10171.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\1. 출력</Filter>
+      <Filter>소스 파일\0. 새싹\1. 출력</Filter>
     </ClCompile>
     <ClCompile Include="01000.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\2. 입력과 계산</Filter>
+      <Filter>소스 파일\0. 새싹\2. 입력과 계산</Filter>
     </ClCompile>
     <ClCompile Include="01001.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\2. 입력과 계산</Filter>
+      <Filter>소스 파일\0. 새싹\2. 입력과 계산</Filter>
     </ClCompile>
     <ClCompile Include="01330.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\3. 조건</Filter>
+      <Filter>소스 파일\0. 새싹\3. 조건</Filter>
     </ClCompile>
     <ClCompile Include="01271.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈5</Filter>
     </ClCompile>
     <ClCompile Include="10172.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\1. 출력</Filter>
+      <Filter>소스 파일\0. 새싹\1. 출력</Filter>
     </ClCompile>
     <ClCompile Include="25083.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\1. 출력</Filter>
+      <Filter>소스 파일\0. 새싹\1. 출력</Filter>
     </ClCompile>
     <ClCompile Include="10998.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\2. 입력과 계산</Filter>
+      <Filter>소스 파일\0. 새싹\2. 입력과 계산</Filter>
     </ClCompile>
     <ClCompile Include="10869.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\2. 입력과 계산</Filter>
+      <Filter>소스 파일\0. 새싹\2. 입력과 계산</Filter>
     </ClCompile>
     <ClCompile Include="01008.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\2. 입력과 계산</Filter>
+      <Filter>소스 파일\0. 새싹\2. 입력과 계산</Filter>
     </ClCompile>
     <ClCompile Include="11382.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\2. 입력과 계산</Filter>
+      <Filter>소스 파일\0. 새싹\2. 입력과 계산</Filter>
     </ClCompile>
     <ClCompile Include="09498.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\3. 조건</Filter>
+      <Filter>소스 파일\0. 새싹\3. 조건</Filter>
     </ClCompile>
     <ClCompile Include="14681.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\3. 조건</Filter>
+      <Filter>소스 파일\0. 새싹\3. 조건</Filter>
     </ClCompile>
     <ClCompile Include="02753.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\3. 조건</Filter>
+      <Filter>소스 파일\0. 새싹\3. 조건</Filter>
     </ClCompile>
     <ClCompile Include="02420.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\3. 조건</Filter>
+      <Filter>소스 파일\0. 새싹\3. 조건</Filter>
     </ClCompile>
     <ClCompile Include="02741.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\4. 반복</Filter>
+      <Filter>소스 파일\0. 새싹\4. 반복</Filter>
     </ClCompile>
     <ClCompile Include="10872.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\4. 반복</Filter>
+      <Filter>소스 파일\0. 새싹\4. 반복</Filter>
     </ClCompile>
     <ClCompile Include="10950.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\4. 반복</Filter>
+      <Filter>소스 파일\0. 새싹\4. 반복</Filter>
     </ClCompile>
     <ClCompile Include="10952.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\4. 반복</Filter>
+      <Filter>소스 파일\0. 새싹\4. 반복</Filter>
     </ClCompile>
     <ClCompile Include="02739.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\4. 반복</Filter>
+      <Filter>소스 파일\0. 새싹\4. 반복</Filter>
     </ClCompile>
     <ClCompile Include="02438.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\4. 반복</Filter>
+      <Filter>소스 파일\0. 새싹\4. 반복</Filter>
     </ClCompile>
     <ClCompile Include="10951.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\4. 반복</Filter>
+      <Filter>소스 파일\0. 새싹\4. 반복</Filter>
     </ClCompile>
     <ClCompile Include="15552.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\5. 빠른 입출력</Filter>
+      <Filter>소스 파일\0. 새싹\5. 빠른 입출력</Filter>
     </ClCompile>
     <ClCompile Include="10871.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\6. 배열</Filter>
+      <Filter>소스 파일\0. 새싹\6. 배열</Filter>
     </ClCompile>
     <ClCompile Include="10807.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\6. 배열</Filter>
+      <Filter>소스 파일\0. 새싹\6. 배열</Filter>
     </ClCompile>
     <ClCompile Include="05597.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\6. 배열</Filter>
+      <Filter>소스 파일\0. 새싹\6. 배열</Filter>
     </ClCompile>
     <ClCompile Include="02738.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\6. 배열</Filter>
+      <Filter>소스 파일\0. 새싹\6. 배열</Filter>
     </ClCompile>
     <ClCompile Include="11654.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\7. 문자열</Filter>
+      <Filter>소스 파일\0. 새싹\7. 문자열</Filter>
     </ClCompile>
     <ClCompile Include="2743.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\7. 문자열</Filter>
+      <Filter>소스 파일\0. 새싹\7. 문자열</Filter>
     </ClCompile>
     <ClCompile Include="02744.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\7. 문자열</Filter>
+      <Filter>소스 파일\0. 새싹\7. 문자열</Filter>
     </ClCompile>
     <ClCompile Include="02754.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\7. 문자열</Filter>
+      <Filter>소스 파일\0. 새싹\7. 문자열</Filter>
     </ClCompile>
     <ClCompile Include="10809.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\7. 문자열</Filter>
+      <Filter>소스 파일\0. 새싹\7. 문자열</Filter>
     </ClCompile>
     <ClCompile Include="11718R.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\7. 문자열</Filter>
+      <Filter>소스 파일\0. 새싹\7. 문자열</Filter>
     </ClCompile>
     <ClCompile Include="09086.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\7. 문자열</Filter>
+      <Filter>소스 파일\0. 새싹\7. 문자열</Filter>
     </ClCompile>
     <ClCompile Include="15964.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\8. 함수</Filter>
+      <Filter>소스 파일\0. 새싹\8. 함수</Filter>
     </ClCompile>
     <ClCompile Include="02475.cpp">
-      <Filter>소스 파일\3. 골드\골드4\0. 새싹\8. 함수</Filter>
+      <Filter>소스 파일\0. 새싹\8. 함수</Filter>
     </ClCompile>
     <ClCompile Include="02562.cpp">
       <Filter>소스 파일\1. 브론즈\브론즈3</Filter>
@@ -1684,7 +1711,7 @@
       <Filter>소스 파일\2. 실버\실버1</Filter>
     </ClCompile>
     <ClCompile Include="02225.cpp">
-      <Filter>소스 파일\3. 골드\골드5</Filter>
+      <Filter>소스 파일\코딩테스트용\15. DP</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
