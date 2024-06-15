@@ -1788,5 +1788,71 @@
     <ClCompile Include="056_02206.cpp">
       <Filter>소스 파일\코딩테스트용\05. 그래프 이론</Filter>
     </ClCompile>
+    <ClCompile Include="061_07576.cpp">
+      <Filter>소스 파일\코딩테스트용\06. BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="062_14502.cpp">
+      <Filter>소스 파일\코딩테스트용\06. BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="063_10026.cpp">
+      <Filter>소스 파일\코딩테스트용\06. BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="064_07569.cpp">
+      <Filter>소스 파일\코딩테스트용\06. BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="065_02206.cpp">
+      <Filter>소스 파일\코딩테스트용\06. BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="066_16236.cpp">
+      <Filter>소스 파일\코딩테스트용\06. BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="068_16234.cpp">
+      <Filter>소스 파일\코딩테스트용\06. BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="071_10026.cpp">
+      <Filter>소스 파일\코딩테스트용\07. DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="073_01520.cpp">
+      <Filter>소스 파일\코딩테스트용\07. DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="075_02573.cpp">
+      <Filter>소스 파일\코딩테스트용\07. DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="081_01715.cpp">
+      <Filter>소스 파일\코딩테스트용\08. 그리디</Filter>
+    </ClCompile>
+    <ClCompile Include="082_01339.cpp">
+      <Filter>소스 파일\코딩테스트용\08. 그리디</Filter>
+    </ClCompile>
+    <ClCompile Include="085_11000.cpp">
+      <Filter>소스 파일\코딩테스트용\08. 그리디</Filter>
+    </ClCompile>
+    <ClCompile Include="151_09663.cpp">
+      <Filter>소스 파일\코딩테스트용\15. 완전 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="111_01753.cpp">
+      <Filter>소스 파일\코딩테스트용\11. 최단 경로</Filter>
+    </ClCompile>
+    <ClCompile Include="152_14502.cpp">
+      <Filter>소스 파일\코딩테스트용\15. 완전 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="155_14500.cpp">
+      <Filter>소스 파일\코딩테스트용\15. 완전 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="156_01107.cpp">
+      <Filter>소스 파일\코딩테스트용\15. 완전 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="161_09663.cpp">
+      <Filter>소스 파일\코딩테스트용\16. 백트래킹</Filter>
+    </ClCompile>
+    <ClCompile Include="175_14500.cpp">
+      <Filter>소스 파일\코딩테스트용\17. 구현</Filter>
+    </ClCompile>
+    <ClCompile Include="177_16236.cpp">
+      <Filter>소스 파일\코딩테스트용\17. 구현</Filter>
+    </ClCompile>
+    <ClCompile Include="178_16234.cpp">
+      <Filter>소스 파일\코딩테스트용\17. 구현</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
