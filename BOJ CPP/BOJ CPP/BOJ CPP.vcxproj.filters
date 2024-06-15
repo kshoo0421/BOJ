@@ -1734,5 +1734,59 @@
     <ClCompile Include="011_07576.cpp">
       <Filter>소스 파일\코딩테스트용\01. 트리 순회</Filter>
     </ClCompile>
+    <ClCompile Include="012_14502.cpp">
+      <Filter>소스 파일\코딩테스트용\01. 트리 순회</Filter>
+    </ClCompile>
+    <ClCompile Include="013_10026.cpp">
+      <Filter>소스 파일\코딩테스트용\01. 트리 순회</Filter>
+    </ClCompile>
+    <ClCompile Include="014_07569.cpp">
+      <Filter>소스 파일\코딩테스트용\01. 트리 순회</Filter>
+    </ClCompile>
+    <ClCompile Include="015_02206.cpp">
+      <Filter>소스 파일\코딩테스트용\01. 트리 순회</Filter>
+    </ClCompile>
+    <ClCompile Include="017_16236.cpp">
+      <Filter>소스 파일\코딩테스트용\01. 트리 순회</Filter>
+    </ClCompile>
+    <ClCompile Include="019_01520.cpp">
+      <Filter>소스 파일\코딩테스트용\01. 트리 순회</Filter>
+    </ClCompile>
+    <ClCompile Include="041_12865.cpp">
+      <Filter>소스 파일\코딩테스트용\04. DP</Filter>
+    </ClCompile>
+    <ClCompile Include="042_09251.cpp">
+      <Filter>소스 파일\코딩테스트용\04. DP</Filter>
+    </ClCompile>
+    <ClCompile Include="043_02293.cpp">
+      <Filter>소스 파일\코딩테스트용\04. DP</Filter>
+    </ClCompile>
+    <ClCompile Include="044_11054.cpp">
+      <Filter>소스 파일\코딩테스트용\04. DP</Filter>
+    </ClCompile>
+    <ClCompile Include="045_01520.cpp">
+      <Filter>소스 파일\코딩테스트용\04. DP</Filter>
+    </ClCompile>
+    <ClCompile Include="046_02294.cpp">
+      <Filter>소스 파일\코딩테스트용\04. DP</Filter>
+    </ClCompile>
+    <ClCompile Include="051_07576.cpp">
+      <Filter>소스 파일\코딩테스트용\05. 그래프 이론</Filter>
+    </ClCompile>
+    <ClCompile Include="052_14502.cpp">
+      <Filter>소스 파일\코딩테스트용\05. 그래프 이론</Filter>
+    </ClCompile>
+    <ClCompile Include="053_01753.cpp">
+      <Filter>소스 파일\코딩테스트용\05. 그래프 이론</Filter>
+    </ClCompile>
+    <ClCompile Include="054_10026.cpp">
+      <Filter>소스 파일\코딩테스트용\05. 그래프 이론</Filter>
+    </ClCompile>
+    <ClCompile Include="055_07569.cpp">
+      <Filter>소스 파일\코딩테스트용\05. 그래프 이론</Filter>
+    </ClCompile>
+    <ClCompile Include="056_02206.cpp">
+      <Filter>소스 파일\코딩테스트용\05. 그래프 이론</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
