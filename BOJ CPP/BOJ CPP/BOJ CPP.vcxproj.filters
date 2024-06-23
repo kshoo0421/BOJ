@@ -1854,5 +1854,23 @@
     <ClCompile Include="178_16234.cpp">
       <Filter>소스 파일\코딩테스트용\17. 구현</Filter>
     </ClCompile>
+    <ClCompile Include="021_02110.cpp">
+      <Filter>소스 파일\코딩테스트용\02. 이분탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="022_12015.cpp">
+      <Filter>소스 파일\코딩테스트용\02. 이분탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="함수 정리.cpp">
+      <Filter>소스 파일\코딩테스트용</Filter>
+    </ClCompile>
+    <ClCompile Include="027_12738.cpp">
+      <Filter>소스 파일\코딩테스트용\02. 이분탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="023_02470.cpp">
+      <Filter>소스 파일\코딩테스트용\02. 이분탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="091_01197.cpp">
+      <Filter>소스 파일\코딩테스트용\09. MST</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
