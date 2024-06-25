@@ -1,117 +1,80 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, m, mn_cnt = 1000000, cx, cy, nx, ny, tmp;
-bool space[1000][1000];
-bool vis[1000][1000];
-int memo[1000][1000];
-int wall[1000][1000];
-int dx[4] = { 1, 0, -1, 0 };
-int dy[4] = { 0, 1, 0, -1 };
-queue<pair<int, int>> q, walls;
+#define X second
+#define Y first
 
-void find_root()
-{
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < m; j++)
-		{
-			memo[i][j] = 0;
-			vis[i][j] = false;
-		}
-	}
-	memo[0][0] = 1;
-	q.push({ 0, 0 });
-	while (!q.empty())
-	{
-		cx = q.front().second;
-		cy = q.front().first;
-		q.pop();
-		if (vis[cy][cx]) continue;
-		vis[cy][cx] = true;
-		for (int i = 0; i < 4; i++)
-		{
-			nx = cx + dx[i];
-			ny = cy + dy[i];
-			if (nx < 0 || ny < 0 || nx >= m || ny >= n) continue;
-			if (vis[ny][nx]) continue;
-			if (space[ny][nx] && wall[ny][nx] != 0)
-			{
-				tmp = memo[cy][cx] + wall[ny][nx];
-				if (tmp > 0) mn_cnt = min(mn_cnt, tmp);
-			}
-			else if (space[ny][nx]) continue;
-			else
-			{
-				q.push({ ny, nx });
-				if (memo[ny][nx] == 0) memo[ny][nx] = memo[cy][cx] + 1;
-				else memo[ny][nx] = min(memo[ny][nx], memo[cy][cx] + 1);
-			}
-		}
-	}
-	if (memo[n - 1][m - 1] != 0) mn_cnt = min(mn_cnt, memo[n - 1][m - 1]);
+int dx[4] = { 1, -1, 0, 0 };
+int dy[4] = { 0, 0, 1, -1 };
+int N, M, cx, cy, nx, ny, result;
+vector<vector<int>> nm_map;
+
+void bfs(vector<vector<int>>& vvi, int y, int x) {
+    queue<pair<int, int>> q;
+    q.push(make_pair(y, x));
+    vvi[y][x] = 1;
+    while (!q.empty()) {
+        cy = q.front().Y;
+        cx = q.front().X;
+        q.pop();
+        for (int i = 0; i < 4; i++) {
+            nx = cx + dx[i];
+            ny = cy + dy[i];
+            if (nx >= 0 && nx < M && ny >= 0 && ny < N) {
+                if (nm_map[ny][nx] != 1)
+                    if(vvi[ny][nx] > vvi[cy][cx] + 1 || vvi[ny][nx] == -1) {
+                    vvi[ny][nx] = vvi[cy][cx] + 1;
+                    q.push(make_pair(ny, nx));
+                }
+            }
+        }
+    }
 }
 
-void step1()
-{
-	memo[n - 1][m - 1] = 1;
-	q.push({ n - 1, m - 1 });
-	while (!q.empty())
-	{
-		cx = q.front().second;
-		cy = q.front().first;
-		q.pop();
-		if (vis[cy][cx]) continue;
-		vis[cy][cx] = true;
-		for (int i = 0; i < 4; i++)
-		{
-			nx = cx + dx[i];
-			ny = cy + dy[i];
-			if (nx < 0 || ny < 0 || nx >= m || ny >= n) continue;
-			if (vis[ny][nx] || space[ny][nx]) continue;
-			q.push({ ny, nx });
-			memo[ny][nx] = memo[cy][cx] + 1;
-		}
-	}
-}
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+    string s;
+    cin >> N >> M;
+    nm_map.assign(N, vector<int>(M));
+    vector<vector<int>> bef(N, vector<int>(M, -1)), aft; aft = bef;
+    queue<pair<int, int>> walls;
 
-void step2()
-{
-	while (!walls.empty())
-	{
-		tmp = 0;
-		cx = walls.front().second;
-		cy = walls.front().first;
-		walls.pop();
-		for (int i = 0; i < 4; i++)
-		{
-			nx = cx + dx[i];
-			ny = cy + dy[i];
-			if (nx < 0 || ny < 0 || nx >= m || ny >= n) continue;
-			if (space[ny][nx] || memo[ny][nx] == 0) continue;
-			if (tmp == 0) tmp = memo[ny][nx] + 1;
-			else tmp = min(tmp, memo[ny][nx] + 1);
-		}
-		wall[cy][cx] = tmp;
-	}
-}
+    for (int i = 0; i < N; i++) {
+        cin >> s;
+        for (int j = 0; j < M; j++) {
+            nm_map[i][j] = s[j] - '0';
+            if (nm_map[i][j] == 1) walls.push(make_pair(i, j));
+        }
+    }
 
-int main()
-{
-	ios::sync_with_stdio(0), cin.tie(0);
-	cin >> n >> m;
-	string input;
-	for (int i = 0; i < n; i++)
-	{
-		cin >> input;
-		for (int j = 0; j < m; j++)
-		{
-			space[i][j] = (bool)(input[j] - '0');
-			if (space[i][j]) walls.push({ i, j });
-		}
-	}
-	step1();
-	step2();
-	find_root();
-	if (mn_cnt == 1000000) cout << "-1";
-	else cout << mn_cnt;
+    bfs(bef, 0, 0);
+    bfs(aft, N - 1, M - 1);
+
+    result = bef[N - 1][M - 1];
+    while (!walls.empty()) {
+        int mb = -1, ma = -1; // min_before; min_after
+        cy = walls.front().Y;
+        cx = walls.front().X;
+        walls.pop();
+        for (int i = 0; i < 4; i++) {
+            ny = cy + dy[i];
+            nx = cx + dx[i];
+            if (nx >= 0 && nx < M && ny >= 0 && ny < N) {
+                if (bef[ny][nx] > 0) {
+                    if (mb == -1) mb= bef[ny][nx];
+                    else mb = min(mb, bef[ny][nx]);
+                }
+                
+                if (aft[ny][nx] > 0) {
+                    if (ma == -1) ma = aft[ny][nx];
+                    else ma = min(ma, aft[ny][nx]);
+                }
+            }
+        }
+        if (ma != -1 && mb != -1) {
+            if (result == -1) result = mb + ma + 1;
+            else result = min(result, mb + ma + 1);
+        }
+    }
+    cout << result;
+    return 0;
 }

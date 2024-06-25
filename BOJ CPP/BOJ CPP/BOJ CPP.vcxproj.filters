@@ -1872,5 +1872,11 @@
     <ClCompile Include="091_01197.cpp">
       <Filter>소스 파일\코딩테스트용\09. MST</Filter>
     </ClCompile>
+    <ClCompile Include="067_13549.cpp">
+      <Filter>소스 파일\코딩테스트용\06. BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="069_01707.cpp">
+      <Filter>소스 파일\코딩테스트용\06. BFS</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

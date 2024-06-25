@@ -1,99 +1,63 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-bool is_end = false;
-int n1, n2, n3, cx, cy, cz, nx, ny, nz, mx = 0;
-int dx[6] = { 1, 0, -1, 0, 0, 0 };
-int dy[6] = { 0, 1, 0, -1, 0, 0 };
-int dz[6] = { 0, 0, 0, 0, 1, -1 };
-int input[100][100][100] = { 0 };
-int cost[100][100][100] = { 0 };
 
+int dx[] = { 1, -1, 0, 0, 0, 0 };
+int dy[] = { 0, 0, 1, -1, 0, 0 };
+int dz[] = { 0, 0, 0, 0, 1, -1 };
 
-struct i3
-{
-	int n[3];
-};
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+    bool ripened;
+    int M, N, H, days = 0, size, nx, ny, nz;
+    cin >> M >> N >> H;
 
-i3 tmp_arr;
-queue<i3> stk;
+    vector<int> cur;
+    vector<vector<vector<int>>> box(H, vector<vector<int>>(N, vector<int>(M)));
+    queue<vector<int>> q;
 
-int main()
-{
-	ios::sync_with_stdio(0), cin.tie(0);
-	cin >> n1 >> n2 >> n3;
-	for (int i = 0; i < n3; i++)
-	{
-		for (int j = 0; j < n2; j++)
-		{
-			for (int k = 0; k < n1; k++)
-			{
-				cin >> input[i][j][k];
-			}
-		}
-	}
+    for (int i = 0; i < H; i++) {
+        for (int j = 0; j < N; j++) {
+            for (int k = 0; k < M; k++) {
+                cin >> box[i][j][k];
+                if (box[i][j][k] == 1) q.push(vector<int>({ i, j, k }));
+            }
+        }
+    }
 
-	for (int i = 0; i < n3; i++)
-	{
-		for (int j = 0; j < n2; j++)
-		{
-			for (int k = 0; k < n1; k++)
-			{
-				if (input[i][j][k] == 1)
-				{
-					tmp_arr.n[0] = i;
-					tmp_arr.n[1] = j;
-					tmp_arr.n[2] = k;
-					stk.push(tmp_arr);
+    while (!q.empty()) {
+        size = q.size();
+        ripened = false;
 
-					while (!stk.empty())
-					{
-						cx = stk.front().n[2];
-						cy = stk.front().n[1];
-						cz = stk.front().n[0];
-						stk.pop();
+        for (int i = 0; i < size; ++i) {
+            cur = q.front();
+            q.pop();
+            for (int j = 0; j < 6; j++) {
+                nz = cur[0] + dz[j];
+                ny = cur[1] + dy[j];
+                nx = cur[2] + dx[j];
 
-						for (int l = 0; l < 6; l++)
-						{
-							nx = cx + dx[l];
-							ny = cy + dy[l];
-							nz = cz + dz[l];
-							if (nx < 0 || nx >= n1) continue;
-							if (ny < 0 || ny >= n2) continue;
-							if (nz < 0 || nz >= n3) continue;
-							if (input[nz][ny][nx] != 0) continue;
-							if (cost[nz][ny][nx] == 0 || cost[nz][ny][nx] > cost[cz][cy][cx] + 1)
-							{
-								if (cost[nz][ny][nx] == 0) cost[nz][ny][nx] = cost[cz][cy][cx] + 1;
-								else cost[nz][ny][nx] = min(cost[cz][cy][cx] + 1, cost[nz][ny][nx]);
-								tmp_arr.n[0] = nz;
-								tmp_arr.n[1] = ny;
-								tmp_arr.n[2] = nx;
-								stk.push(tmp_arr);
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	for (int i = 0; i < n3; i++)
-	{
-		for (int j = 0; j < n2; j++)
-		{
-			for (int k = 0; k < n1; k++)
-			{
-				if (cost[i][j][k] == 0 && input[i][j][k] == 0)
-				{
-					is_end = true;
-					break;
-				}
-				if (cost[i][j][k] > mx) mx = cost[i][j][k];
-			}
-			if (is_end) break;
-		}
-		if (is_end) break;
-	}
-	if (is_end) cout << "-1";
-	else cout << mx;
+                if (nz >= 0 && nz < H && ny >= 0 && ny < N && nx >= 0 && nx < M) {
+                    if (box[nz][ny][nx] == 0) {
+                        box[nz][ny][nx] = 1;
+                        q.push(vector<int>({ nz, ny, nx }));
+                        ripened = true;
+                    }
+                }
+            }
+        }
+        if (ripened) days++;
+    }
+
+    for (int i = 0; i < H; i++) {
+        for (int j = 0; j < N; j++) {
+            for (int k = 0; k < M; k++) {
+                if (box[i][j][k] == 0) {
+                    cout << "-1\n";
+                    return 0;
+                }
+            }
+        }
+    }
+    cout << days << "\n";
+    return 0;
 }

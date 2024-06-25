@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int n, shark = 2, cur_x, cur_y, cx, cy, nx, ny, ccnt, ncnt, ate_fish, total_time = 0;
 int space[20][20], memo[20][20];
 int dx[4] = { 1, 0, -1, 0 };
