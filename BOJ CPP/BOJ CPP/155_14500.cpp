@@ -1,108 +1,56 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
+#include <bits/stdc++.h>
+#define X second
+#define Y first
 using namespace std;
-vector<vector<int>> arr, memo;
-int n, m, max_val, all_op[8];
+int N, M, mx = 0;
+vector<vector<int>> space;
+vector<pair<int, int>> tetris;
 
-int xp3(const int& x, const int& y)
-{
-	if (x + 3 >= m) return 0;
-	return arr[y][x] + arr[y][x + 1] + arr[y][x + 2] + arr[y][x + 3];
+void FindMax(int y, int x, int idx) {
+	if (y < 0 || y >= N || x < 0 || x >= M) return;
+	for (auto vii : tetris) if (vii.Y == y && vii.X == x) return;
+
+	tetris.emplace_back(make_pair(y, x));
+	if (idx == 3) {
+		int sum = 0;
+		for (auto vii : tetris) sum += space[vii.Y][vii.X];
+		if (sum > mx) mx = sum;
+	}
+	else {
+		FindMax(y + 1, x, idx + 1);
+		FindMax(y - 1, x, idx + 1);
+		FindMax(y, x + 1, idx + 1);
+		FindMax(y, x - 1, idx + 1);
+	}
+	tetris.pop_back();
 }
 
-int yp3(const int& x, const int& y)
-{
-	if (y + 3 >= n) return 0;
-	return arr[y][x] + arr[y + 1][x] + arr[y + 2][x] + arr[y + 3][x];
+void FindTValue(int y, int x) {
+	if ((y == 0 || y == N - 1) && (x == 0 || x == M - 1)) return;
+	int sum = 0;
+	if (y == 0) sum = space[y][x] + space[y][x - 1] + space[y][x + 1] + space[y + 1][x];
+	else if (x == 0) sum = space[y][x] + space[y - 1][x] + space[y + 1][x] + space[y][1];
+	else if (y == N - 1) sum = space[y][x] + space[y][x - 1] + space[y][x + 1] + space[y - 1][x];
+	else if (x == M - 1) sum = space[y][x] + space[y][x - 1] + space[y + 1][x] + space[y - 1][x];
+	else {
+		sum = space[y][x] + space[y][x - 1] + space[y][x + 1] + space[y + 1][x] + space[y - 1][x];
+		int mn = min(min(space[y + 1][x], space[y - 1][x]), min(space[y][x + 1], space[y][x - 1]));
+		sum -= mn;
+	}
+	if (mx < sum) mx = sum;
 }
-
-int xp1yp1(const int& x, const int& y)
-{
-	if (x + 1 >= m || y + 1 >= n) return 0;
-	return arr[y][x] + arr[y + 1][x] + arr[y][x + 1] + arr[y + 1][x + 1];
-}
-
-int xp2yp1(const int& x, const int& y)
-{
-	int temp[5];
-	if (x + 2 >= m || y + 1 >= n) return 0;
-	temp[0] = arr[y][x] + arr[y][x + 1] + arr[y][x + 2] + arr[y + 1][x + 2];
-	temp[1] = arr[y][x] + arr[y][x + 1] + arr[y][x + 2] + arr[y + 1][x + 1];
-	temp[2] = arr[y][x] + arr[y][x + 1] + arr[y][x + 2] + arr[y + 1][x];
-	temp[3] = arr[y][x] + arr[y][x + 1] + arr[y + 1][x + 1] + arr[y + 1][x + 2];
-	temp[4] = arr[y][x] + arr[y + 1][x] + arr[y + 1][x + 1] + arr[y + 1][x + 2];
-	sort(temp, temp + 5, greater<int>());
-	return temp[0];
-}
-
-int xp1yp2(const int& x, const int& y)
-{
-	int temp[5];
-	if (x + 1 >= m || y + 2 >= n) return 0;
-	temp[0] = arr[y][x] + arr[y + 1][x] + arr[y + 2][x] + arr[y + 2][x + 1];
-	temp[1] = arr[y][x] + arr[y + 1][x] + arr[y + 2][x] + arr[y + 1][x + 1];
-	temp[2] = arr[y][x] + arr[y + 1][x] + arr[y + 2][x] + arr[y][x + 1];
-	temp[3] = arr[y][x] + arr[y + 1][x] + arr[y + 1][x + 1] + arr[y + 2][x + 1];
-	temp[4] = arr[y][x] + arr[y][x + 1] + arr[y + 1][x + 1] + arr[y + 2][x + 1];
-	sort(temp, temp + 5, greater<int>());
-	return temp[0];
-}
-
-int xm1yp2(const int& x, const int& y)
-{
-	int temp[3];
-	if (x - 1 < 0 || y + 2 >= n) return 0;
-	temp[0] = arr[y][x] + arr[y + 1][x] + arr[y + 2][x] + arr[y + 2][x - 1];
-	temp[1] = arr[y][x] + arr[y + 1][x] + arr[y + 2][x] + arr[y + 1][x - 1];
-	temp[2] = arr[y][x] + arr[y + 1][x] + arr[y + 1][x - 1] + arr[y + 2][x - 1];
-	sort(temp, temp + 3, greater<int>());
-	return temp[0];
-}
-
-int xm2yp1(const int& x, const int& y)
-{
-	if (x - 2 < 0 || y + 1 >= n) return 0;
-	return arr[y][x] + arr[y + 1][x] + arr[y + 1][x - 1] + arr[y + 1][x - 2];
-}
-
-int xpm1yp1(const int& x, const int& y)
-{
-	int temp[2];
-	if (x - 1 < 0 || x + 1 >= m || y + 1 >= n) return 0;
-	temp[0] = arr[y][x] + arr[y + 1][x] + arr[y + 1][x - 1] + arr[y][x + 1];
-	temp[1] = arr[y][x] + arr[y + 1][x] + arr[y + 1][x - 1] + arr[y + 1][x + 1];
-	sort(temp, temp + 2, greater<int>());
-	return temp[0];
-}
-
 int main()
 {
-	ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-	cin >> n >> m;
-	vector<int> temp(m);
-	arr.resize(n), memo.resize(n);
-	for (int i = 0; i < n; i++) arr[i] = temp, memo[i] = temp;
-	for (auto& i : arr) for (int& j : i) cin >> j;
+	ios::sync_with_stdio(0), cin.tie(0);
+	cin >> N >> M;
+	space.assign(N, vector<int>(M));
+	for (auto& vi : space) for (int& i : vi) cin >> i;
 
-	for (int y = 0; y < n; y++)
-	{
-		for (int x = 0; x < m; x++)
-		{
-			all_op[0] = xm1yp2(x, y);
-			all_op[1] = xm2yp1(x, y);
-			all_op[2] = xp1yp1(x, y);
-			all_op[3] = xp1yp2(x, y);
-			all_op[4] = xp2yp1(x, y);
-			all_op[5] = xp3(x, y);
-			all_op[6] = xpm1yp1(x, y);
-			all_op[7] = yp3(x, y);
-			sort(all_op, all_op + 8, greater<int>());
-			memo[y][x] = all_op[0];
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < M; j++) {
+			FindMax(i, j, 0);
+			FindTValue(i, j);
 		}
 	}
-	max_val = 0;
-	for (auto i : memo) for (int j : i) if (max_val < j) max_val = j;
-	cout << max_val;
-	return 0;
+	cout << mx;
 }

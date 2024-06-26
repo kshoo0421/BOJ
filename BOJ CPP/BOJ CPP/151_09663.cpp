@@ -2,67 +2,46 @@
 using namespace std;
 
 int n, cnt = 0;
-int isused[15][15];
-bool is_all_used;
+int isUsed[15][15];
+bool isAllUsed;
 
-void plus_used(int x, int y)
-{
-	for (int i = y + 1; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			if (j == x || y - x == i - j || x + y == i + j) isused[i][j]++;
+void CheckUsed(int x, int y, bool isPlus) {
+	for (int i = y + 1; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (j == x || y - x == i - j || x + y == i + j) {
+				if (isPlus) isUsed[i][j]++;
+				else isUsed[i][j]--;
+			}
 		}
 	}
 }
 
-void minus_used(int x, int y)
-{
-	for (int i = y + 1; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			if (isused[i][j] == 0) continue;
-			if (j == x || y - x == i - j || x + y == i + j) isused[i][j]--;
-		}
-	}
-
-}
-
-void func(int k)
-{
-	if (k == n)
-	{
+void BackTracking(int idx) {
+	if (idx == n) {
 		cnt++;
 		return;
 	}
-
-	is_all_used = true;
-	for (int i = 0; i < n; i++)
-	{
-		if (isused[k + 1][i] == 0)
-		{
-			is_all_used = false;
+	isAllUsed = true;
+	for (int i = 0; i < n; i++) {
+		if (isUsed[idx + 1][i] == 0) {
+			isAllUsed = false;
 			break;
 		}
 	}
-	if (is_all_used) return;
+	if (isAllUsed) return;
 
-	for (int i = 0; i < n; i++)
-	{
-		if (isused[k][i] == 0)
-		{
-			plus_used(i, k);
-			func(k + 1);
-			minus_used(i, k);
+	for (int i = 0; i < n; i++) {
+		if (isUsed[idx][i] == 0) {
+			CheckUsed(i, idx, true);
+			BackTracking(idx + 1);
+			CheckUsed(i, idx, false);
 		}
 	}
 }
 
-int main()
-{
+int main() {
 	ios::sync_with_stdio(0), cin.tie(0);
 	cin >> n;
-	func(0);
+	BackTracking(0);
 	cout << cnt;
 }

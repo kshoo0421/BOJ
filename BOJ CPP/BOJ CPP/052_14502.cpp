@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int dx[] = { 1, 0, -1, 0 };
-int dy[] = { 0, 1, 0, -1 };
+int dx[] = { 1, -1, 0, 0 };
+int dy[] = { 0, 0, 1, -1 };
 
 int n, m, cx, cy, nx, ny, safeArea, maxSafeArea = 0;
 vector<vector<int>> lab, tmpLab;

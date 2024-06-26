@@ -1878,5 +1878,26 @@
     <ClCompile Include="069_01707.cpp">
       <Filter>소스 파일\코딩테스트용\06. BFS</Filter>
     </ClCompile>
+    <ClCompile Include="162_15686.cpp">
+      <Filter>소스 파일\코딩테스트용\16. 백트래킹</Filter>
+    </ClCompile>
+    <ClCompile Include="153_15686.cpp">
+      <Filter>소스 파일\코딩테스트용\15. 완전 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="171_14502.cpp">
+      <Filter>소스 파일\코딩테스트용\17. 구현</Filter>
+    </ClCompile>
+    <ClCompile Include="154_01759.cpp">
+      <Filter>소스 파일\코딩테스트용\15. 완전 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="163_01759.cpp">
+      <Filter>소스 파일\코딩테스트용\16. 백트래킹</Filter>
+    </ClCompile>
+    <ClCompile Include="072_01987.cpp">
+      <Filter>소스 파일\코딩테스트용\07. DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="164_01987.cpp">
+      <Filter>소스 파일\코딩테스트용\16. 백트래킹</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
