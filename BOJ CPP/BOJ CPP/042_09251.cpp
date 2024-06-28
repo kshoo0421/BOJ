@@ -1,35 +1,17 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-	ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-	int temp;
-	string input[2];
-	for (string& i : input) cin >> i;
-	vector<int> temp_vec(input[1].length());
-	vector<vector<int>> memo(input[0].length());
-	for (auto& i : memo) i = temp_vec;
-	for (int i = 0; i < input[0].length(); i++)
-	{
-		temp = 0;
-		for (int j = 0; j < input[1].length(); j++)
-		{
-			if (i == 0)
-			{
-				if (input[0][i] == input[1][j]) memo[0][j] = 1;
-			}
-			else
-			{
-				if (j != 0) if (temp < memo[i - 1][j - 1]) temp = memo[i - 1][j - 1];
-				if (input[0][i] == input[1][j])	memo[i][j] = temp + 1;
-				else memo[i][j] = memo[i - 1][j];
-			}
+	ios::sync_with_stdio(0), cin.tie(0);
+	string S[2];
+	for (string& s : S) cin >> s;
+	vector<vector<int>> dp(S[0].size() + 1, vector<int>(S[1].size() + 1, 0));
+	for (int i = 0; i < S[0].size(); i++) {
+		for (int j = 0; j < S[1].size(); j++) {
+			if (S[0][i] == S[1][j]) dp[i + 1][j + 1] = dp[i][j] + 1;
+			else dp[i + 1][j + 1] = max(dp[i + 1][j], dp[i][j + 1]);
 		}
 	}
-	for (int i : memo[input[0].length() - 1]) if (temp < i) temp = i;
-	cout << temp;
-	return 0;
+	cout << dp[S[0].size()][S[1].size()];
 }
