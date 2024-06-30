@@ -14,4 +14,5 @@ int main()
 	- 만약 그런 값이 없다면, last를 반환
 	- 시간 복잡도 : O(logN)
 	*/ 
+	priority_queue<int> pq; // push하면 내림차순으로 자동 정렬
 }

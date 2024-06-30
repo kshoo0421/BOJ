@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, shark = 2, cur_x, cur_y, cx, cy, nx, ny, ccnt, ncnt, ate_fish, total_time = 0;
+int n, shark = 2, cur_x, cur_y, cx, cy, nx, ny, ccnt, ncnt, ate_fish, result = 0;
 int space[20][20], memo[20][20];
 int dx[4] = { 1, 0, -1, 0 };
 int dy[4] = { 0, 1, 0, -1 };
@@ -20,16 +20,16 @@ int cmp(possible p1, possible p2)
 }
 
 queue<possible> q;
-vector<possible> v_possible;
-possible tmp_possible;
+vector<possible> vp;
+possible tmpP;
 
-bool eat_fish()
+bool EatFish()
 {
 	for (int i = 0; i < 20; i++) for (int j = 0; j < 20; j++) memo[i][j] = 0;
-	tmp_possible.time = 0;
-	tmp_possible.x = cur_x;
-	tmp_possible.y = cur_y;
-	q.push(tmp_possible);
+	tmpP.time = 0;
+	tmpP.x = cur_x;
+	tmpP.y = cur_y;
+	q.push(tmpP);
 	while (!q.empty())
 	{
 		ccnt = q.front().time;
@@ -48,33 +48,33 @@ bool eat_fish()
 
 			if (space[ny][nx] == shark || space[ny][nx] == 0)
 			{
-				tmp_possible.time = ncnt;
-				tmp_possible.x = nx;
-				tmp_possible.y = ny;
-				q.push(tmp_possible);
+				tmpP.time = ncnt;
+				tmpP.x = nx;
+				tmpP.y = ny;
+				q.push(tmpP);
 			}
 			else
 			{
-				tmp_possible.time = ncnt;
-				tmp_possible.x = nx;
-				tmp_possible.y = ny;
-				v_possible.emplace_back(tmp_possible);
+				tmpP.time = ncnt;
+				tmpP.x = nx;
+				tmpP.y = ny;
+				vp.emplace_back(tmpP);
 			}
 		}
 	}
-	if (v_possible.size() == 0) return true;
-	sort(v_possible.begin(), v_possible.end(), cmp);
-	cur_x = v_possible[0].x;
-	cur_y = v_possible[0].y;
+	if (vp.size() == 0) return true;
+	sort(vp.begin(), vp.end(), cmp);
+	cur_x = vp[0].x;
+	cur_y = vp[0].y;
 	space[cur_y][cur_x] = 0;
-	total_time += v_possible[0].time;
+	result += vp[0].time;
 	ate_fish++;
 	if (shark == ate_fish)
 	{
 		ate_fish = 0;
 		shark++;
 	}
-	v_possible.clear();
+	vp.clear();
 	return false;
 }
 
@@ -95,6 +95,6 @@ int main()
 			}
 		}
 	}
-	while (1) { if (eat_fish()) break; }
-	cout << total_time;
+	while (1) { if (EatFish()) break; }
+	cout << result;
 }

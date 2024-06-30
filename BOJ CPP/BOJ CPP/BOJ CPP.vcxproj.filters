@@ -1905,5 +1905,20 @@
     <ClCompile Include="049_02565.cpp">
       <Filter>소스 파일\코딩테스트용\04. DP</Filter>
     </ClCompile>
+    <ClCompile Include="089_01700.cpp">
+      <Filter>소스 파일\코딩테스트용\08. 그리디</Filter>
+    </ClCompile>
+    <ClCompile Include="083_01202.cpp">
+      <Filter>소스 파일\코딩테스트용\08. 그리디</Filter>
+    </ClCompile>
+    <ClCompile Include="085_01744.cpp">
+      <Filter>소스 파일\코딩테스트용\08. 그리디</Filter>
+    </ClCompile>
+    <ClCompile Include="08712904.cpp">
+      <Filter>소스 파일\코딩테스트용\08. 그리디</Filter>
+    </ClCompile>
+    <ClCompile Include="15650.cpp">
+      <Filter>소스 파일\2. 실버\실버3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

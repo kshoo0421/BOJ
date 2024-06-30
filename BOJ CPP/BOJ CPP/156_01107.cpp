@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 bool btn_err[10];
 
 bool is_num_possible(int n)

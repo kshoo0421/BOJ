@@ -1,75 +1,60 @@
 #include <bits/stdc++.h>
+#define X second
+#define Y first
 using namespace std;
-int n, l, r, cx, cy, nx, ny, tx, ty, tk, dif, sum, cnt = 0;
+
+int N, L, R, cx, cy, nx, ny, tx, ty, tk, dif, sum, cnt = 0;
 int dx[4] = { 1, 0, -1, 0 };
 int dy[4] = { 0, 1, 0, -1 };
-int A[50][50], cmp[50][50];
-bool is_open[50][50][2], vis[50][50];
+vector<vector<int>> A, cmp;
+vector<vector<bool>> isVisited;
+vector<vector<vector<bool>>> isOpen;
 queue<pair<int, int>> q, memo;
 
-void check_open()
-{
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			for (int k = 0; k < 2; k++)
-				is_open[i][j][k] = false;
-		}
-	}
-
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
+void CheckOpen() {
+	isOpen.assign(N, vector<vector<bool>>(N, vector<bool>(2, false)));
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
 			cx = j, cy = i;
-			for (int k = 0; k < 2; k++)
-			{
+			for (int k = 0; k < 2; k++) {
 				nx = cx + dx[k];
 				ny = cy + dy[k];
-				if (nx < 0 || nx >= n || ny < 0 || ny >= n) continue;
+				if (nx < 0 || nx >= N || ny < 0 || ny >= N) continue;
 				dif = abs(A[cy][cx] - A[ny][nx]);
-				if (dif >= l && dif <= r) is_open[cy][cx][k] = true;
+				if (dif >= L && dif <= R) isOpen[cy][cx][k] = true;
 			}
 		}
 	}
 }
 
-void move()
-{
-	for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) vis[i][j] = false;
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			if (!vis[i][j])
-			{
+void Move() {
+	isVisited.assign(N, vector<bool>(N, false));
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
+			if (!isVisited[i][j]) {
 				sum = 0;
 				q.push({ i, j });
-				while (!q.empty())
-				{
-					cx = q.front().second;
-					cy = q.front().first;
+				while (!q.empty()) {
+					cx = q.front().X;
+					cy = q.front().Y;
 					q.pop();
-					if (vis[cy][cx]) continue;
-					vis[cy][cx] = true;
+					if (isVisited[cy][cx]) continue;
+					isVisited[cy][cx] = true;
 					sum += A[cy][cx];
 					memo.push({ cy, cx });
-					for (int k = 0; k < 4; k++)
-					{
+					for (int k = 0; k < 4; k++) {
 						nx = cx + dx[k];
 						ny = cy + dy[k];
-						if (nx < 0 || nx >= n || ny < 0 || ny >= n) continue;
+						if (nx < 0 || nx >= N || ny < 0 || ny >= N) continue;
 						if (k > 1) tk = k - 2, tx = nx, ty = ny;
 						else tk = k, tx = cx, ty = cy;
-						if (!is_open[ty][tx][tk]) continue;
+						if (!isOpen[ty][tx][tk]) continue;
 						q.push({ ny, nx });
 					}
 				}
 				sum /= memo.size();
-				while (!memo.empty())
-				{
-					A[memo.front().first][memo.front().second] = sum;
+				while (!memo.empty()) {
+					A[memo.front().Y][memo.front().X] = sum;
 					memo.pop();
 				}
 			}
@@ -77,10 +62,9 @@ void move()
 	}
 }
 
-bool is_diff()
-{
-	for (int i = 0; i < n; i++)
-		for (int j = 0; j < n; j++)
+bool IsDiff() {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++)
 			if (cmp[i][j] != A[i][j]) return true;
 	return false;
 
@@ -89,22 +73,17 @@ bool is_diff()
 int main()
 {
 	ios::sync_with_stdio(0), cin.tie(0);
-	cin >> n >> l >> r;
-	for (int i = 0; i < n; i++)
-		for (int j = 0; j < n; j++)
-			cin >> A[i][j];
-	for (int i = 0; i < n; i++)
-		for (int j = 0; j < n; j++)
-			cmp[i][j] = A[i][j];
-	while (1)
-	{
-		check_open();
-		move();
-		if (is_diff())
-		{
-			for (int i = 0; i < n; i++)
-				for (int j = 0; j < n; j++)
-					cmp[i][j] = A[i][j];
+	cin >> N >> L >> R;
+	A.assign(N, vector<int>(N));
+	cmp.assign(N, vector<int>(N));
+	for (auto& vi : A) for (int& i : vi) cin >> i;
+	cmp = A;
+
+	while (1) {
+		CheckOpen();
+		Move();
+		if (IsDiff()) {
+			cmp = A;
 			cnt++;
 			continue;
 		}
