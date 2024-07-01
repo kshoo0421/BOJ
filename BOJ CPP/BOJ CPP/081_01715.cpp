@@ -1,28 +1,24 @@
-#include <iostream>
-#include <set>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-	ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
-	int n, temp, sum = 0;
+int main() 
+{
+	ios::sync_with_stdio(0), cin.tie(0);
+	int n, tmp, sum = 0;
 	multiset<int> card;
 	cin >> n;
-	for (int i = 0; i < n; i++) {
-		cin >> temp;
-		card.insert(temp);
+	while(n--){
+		cin >> tmp;
+		card.insert(tmp);
 	}
 
-	while (1) {
-		if (card.size() == 1) break;
-		auto i = card.begin();
-		auto first = i;
-		auto second = ++i;
-		temp = *first + *second;
-		sum += temp;
-		card.erase(first);
-		card.erase(second);
-		card.insert(temp);
+	while (card.size() > 1) {
+		tmp = *(card.begin());
+		card.erase(card.begin());
+		tmp += *(card.begin());
+		card.erase(card.begin());
+		sum += tmp;
+		card.insert(tmp);
 	}
 	cout << sum;
-	return 0;
 }

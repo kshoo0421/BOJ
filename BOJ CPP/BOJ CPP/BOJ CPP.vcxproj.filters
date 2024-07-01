@@ -282,5 +282,8 @@
     <ClCompile Include="088_02812.cpp">
       <Filter>소스 파일\코딩테스트용\08. 그리디</Filter>
     </ClCompile>
+    <ClCompile Include="086_02437.cpp">
+      <Filter>소스 파일\코딩테스트용\08. 그리디</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
