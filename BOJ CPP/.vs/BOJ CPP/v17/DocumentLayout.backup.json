@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\uAE40\uC2DC\uD6C4\\Desktop\\Coding\\BOJ\\BOJ CPP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA3593B-2284-405C-A9C6-755192DCB38F}|BOJ CPP\\BOJ CPP.vcxproj|C:\\Users\\\uAE40\uC2DC\uD6C4\\Desktop\\Coding\\BOJ\\BOJ CPP\\BOJ CPP\\011_07576.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CAA3593B-2284-405C-A9C6-755192DCB38F}|BOJ CPP\\BOJ CPP.vcxproj|solutionrelative:BOJ CPP\\011_07576.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA3593B-2284-405C-A9C6-755192DCB38F}|BOJ CPP\\BOJ CPP.vcxproj|C:\\Users\\\uAE40\uC2DC\uD6C4\\Desktop\\Coding\\BOJ\\BOJ CPP\\BOJ CPP\\016_01987.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CAA3593B-2284-405C-A9C6-755192DCB38F}|BOJ CPP\\BOJ CPP.vcxproj|solutionrelative:BOJ CPP\\016_01987.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "011_07576.cpp",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uC2DC\uD6C4\\Desktop\\Coding\\BOJ\\BOJ CPP\\BOJ CPP\\011_07576.cpp",
+              "RelativeDocumentMoniker": "BOJ CPP\\011_07576.cpp",
+              "ToolTip": "C:\\Users\\\uAE40\uC2DC\uD6C4\\Desktop\\Coding\\BOJ\\BOJ CPP\\BOJ CPP\\011_07576.cpp",
+              "RelativeToolTip": "BOJ CPP\\011_07576.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-19T07:56:53.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "016_01987.cpp",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uC2DC\uD6C4\\Desktop\\Coding\\BOJ\\BOJ CPP\\BOJ CPP\\016_01987.cpp",
+              "RelativeDocumentMoniker": "BOJ CPP\\016_01987.cpp",
+              "ToolTip": "C:\\Users\\\uAE40\uC2DC\uD6C4\\Desktop\\Coding\\BOJ\\BOJ CPP\\BOJ CPP\\016_01987.cpp",
+              "RelativeToolTip": "BOJ CPP\\016_01987.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-19T07:56:50.015Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
