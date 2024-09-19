@@ -1,58 +1,47 @@
-// 아직 안돌림
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> parent, rankV;
+int main()
+{
+	ios::sync_with_stdio(0), cin.tie(0);
+	int V, E;
+	cin >> V >> E;
+	vector<vector<int>> edges(E, vector<int>(3));
+	for (auto& edge : edges) cin >> edge[0] >> edge[1] >> edge[2];
 
-int find(int u) {
-    if (parent[u] != u) parent[u] = find(parent[u]);
-    return parent[u];
-}
+	vector<int> parent(V + 1), rank(V + 1, 0);
+	for (int i = 1; i <= V; i++) parent[i] = i;
+	
+	function<int(int)> FindParent = [&](int a) -> int {
+		if (a == parent[a]) return a;
+		return parent[a] = FindParent[parent[a]];
+	};
 
-void unionSets(int u, int v) {
-    int rootU = find(u);
-    int rootV = find(v);
+	function<void(int, int)> SetUnion = [&](int x, int y) -> void {
+		int rootX = FindParent(x);
+		int rootY = FindParent(y);
 
-    if (rootU != rootV) {
-        if (rankV[rootU] > rankV[rootV]) parent[rootV] = rootU;
-        else if (rankV[rootU] < rankV[rootV]) parent[rootU] = rootV;
-        else {
-            parent[rootV] = rootU;
-            rankV[rootU]++;
-        }
-    }
-}
+		if (rootX != rootY) {
+			if (rank[rootX] < rank[rootY]) parent[rootX] = rootY;
+			else if (rank[rootX] > rank[rootY]) parent[rootY] = rootX;
+			else {
+				parent[rootY] = rootX;
+				rank[rootX]++;
+			}
+		}
+	};
 
-int main() {
-    ios::sync_with_stdio(0), cin.tie(0);
-    int V, E, A, B, C;
-    cin >> V >> E;
-    
-    vector<int> vi(3);
-    vector<vector<int>> edges;
-    for (int i = 0; i < E; i++) {
-        cin >> vi[0] >> vi[1] >> vi[2];
-        edges.push_back(vi);
-    }
+	sort(edges.begin(), edges.end(), [](vector<int>& v1, vector<int>& v2) {
+		return v1[2] < v2[2];
+	});
 
-    // 간선을 가중치 순으로 정렬
-    sort(edges.begin(), edges.end());
-
-    parent.resize(V + 1);
-    rankV.resize(V + 1, 0);
-    for (int i = 1; i <= V; i++) {
-        parent[i] = i;
-    }
-
-    int mst_weight = 0;
-    for (auto ti : edges) {
-        if (find(ti[0]) != find(ti[2])) {
-            unionSets(ti[1], ti[2]);
-            mst_weight += ti[0];
-        }
-    }
-
-    cout << mst_weight;
-
-    return 0;
+	int answer = 0;
+	for (auto& vi : edges) {
+		int x = vi[0], y = vi[1], cost = vi[2];
+		if (FindParent(x) != FindParent(y)) {
+			SetUnion(x, y);
+			answer += cost;
+		}
+	}
+	cout << answer;
 }
