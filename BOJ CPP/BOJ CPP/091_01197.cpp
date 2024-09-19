@@ -14,7 +14,7 @@ int main()
 	
 	function<int(int)> FindParent = [&](int a) -> int {
 		if (a == parent[a]) return a;
-		return parent[a] = FindParent[parent[a]];
+		return parent[a] = FindParent(parent[a]);
 	};
 
 	function<void(int, int)> SetUnion = [&](int x, int y) -> void {
